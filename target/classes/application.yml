@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        dataSourceClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost/sampledb
+        username: root
+        password:
+    jpa:
+        hibernate:
+            ddl-auto: update
+            dialect: org.hibernate.dialect.MySQLInnoDBDialect
+logback:
+    loglevel: debug

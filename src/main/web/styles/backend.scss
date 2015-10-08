@@ -1,0 +1,497 @@
+/*sass --watch backend.scss:backend.css*/
+
+/* set colors */
+$turquoise: #1abc9c;
+$greenSea: #16a085;
+$peterRiver: #3498db;
+$belizeHole: #2980b9;
+$wetAsphalt: #34495e;
+$midnightBlue: #2c3e50;
+$sunFlower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+$black: #000000;
+$white: #ffffff;
+
+html {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 0px) {
+  html {
+    font-size: 3.5px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: $white;
+  color: $concrete;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navigation {
+  z-index: 999;
+}
+
+#title-container {
+  background-color: $turquoise;
+  overflow: hidden;
+}
+
+#front-page {
+  overflow: auto;
+}
+
+.basic-container {
+  border-radius: 0px;
+  z-index: 100;
+}
+
+.create-container {
+  background-color: $clouds;
+}
+
+.front-page {
+  /*background: url("../images/background.jpg") no-repeat center center;*/
+  background-color: $turquoise;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  min-height: 100%;
+  font-weight: 900;
+  color: $white;
+}
+
+.hide-front-page {
+  overflow: hidden;
+  height: 50px;
+}
+
+.front-page-title {
+  font-size: 6rem;
+  margin-bottom: 0;
+}
+
+.front-page-subtitle {
+  font-size: 3rem;
+}
+
+.front-page-info {
+  font-size: 3rem;
+}
+
+.add-bottom-padding {
+  padding-bottom: 40px;
+}
+
+.add-top-margin {
+  margin-top: 1rem;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+
+.custom-panel-title {
+  font-weight: bold;
+}
+
+.make-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: $concrete;
+}
+
+.page-header {
+  border-bottom: 3px solid $concrete;
+}
+
+.page-header-info {
+  border-bottom: 3px solid $concrete;
+  margin-bottom: 20px;
+}
+
+.min-height {
+  min-height: 300px;
+}
+
+.panel {
+  border-radius: 6px;
+  background-color: $clouds;
+  color: $concrete;
+  border: none;
+  box-shadow: none !important;
+
+  .panel-button {
+    color: inherit;
+  }
+}
+
+.panel:hover {
+  cursor: pointer;
+  background-color: $turquoise;
+  color: $clouds;
+
+  .panel-button:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.panel:last-child {
+  margin-bottom: 2rem;
+}
+
+.panel-body {
+  font-size: 14px;
+}
+
+.bottom-nav.navbar-default {
+  background-image: none;
+  background-color: $turquoise;
+  box-shadow: none;
+  border: none;
+}
+
+/*
+  Fixed version of the navbar for front-page
+*/
+
+.fix-navbar-style {
+
+  &.navbar-default {
+    background-image: none;
+    background-color: $turquoise;
+    box-shadow: none;
+    border: none;
+
+    .navbar-nav {
+
+      > .open > a, > .active > a, > .active > a:focus, > .active > a:hover {
+        box-shadow: none;
+        background-color: $greenSea;
+        color: $white;
+      }
+
+      > li > a {
+
+        & {
+          color: $white;
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: $greenSea;
+        }
+      }
+
+    }
+
+    .navbar-brand {
+      color: $white;
+    }
+  }
+
+  &.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    bottom: 0;
+    padding-top: 0;
+
+    > .container .navbar-brand, > .container-fluid .navbar-brand:hover, > .container-fluid .navbar-brand:focus {
+      color: $greenSea;
+    }
+  }
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  bottom: 0;
+  padding-top: 0;
+
+  .container .navbar-brand, .container-fluid .navbar-brand:hover {
+    color: $white;
+  }
+}
+
+.navbar-default {
+  background-image: none;
+  background-color: $greenSea;
+  box-shadow: none;
+  border: none;
+
+  .navbar-toggle {
+    & {
+      border-color: $clouds;
+      color: $clouds;
+    }
+
+    &:hover, &:focus {
+      color: $concrete;
+    }
+  }
+
+  .navbar-brand {
+    color: $white;
+  }
+
+  .navbar-nav {
+
+    li a {
+      & {
+        color: $clouds;
+        font-size: 14px;
+      }
+
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+    > .open > a, > .active > a {
+      background-image: none;
+      color: $turquoise;
+      margin-bottom: 0px;
+    }
+
+    > .open > a, > .active > a, > .active > a:hover, > .active > a:focus {
+      box-shadow: none;
+      background-color: $turquoise;
+      color: $white;
+      border: none;
+    }
+  }
+}
+
+
+.btn {
+  border-radius: 6px;
+  font-size: 14px;
+
+  &.center {
+    line-height: 1.7;
+  }
+}
+
+.btn-custom {
+  background-color: $turquoise;
+  color: $white;
+  width: 80px;
+  font-size: 16px;
+}
+
+.btn-custom:hover, .btn-custom:focus {
+  background-color: $greenSea;
+  color: $clouds;
+}
+
+.btn-footer1 {
+  background-color: $alizarin;
+}
+
+.btn-footer1:hover {
+  background-color: $pomegranate;
+  color: $clouds;
+}
+
+.btn-footer2 {
+  background-color: $carrot;
+}
+
+.btn-footer2:hover {
+  background-color: $pumpkin;
+  color: $clouds;
+}
+
+.btn-footer3 {
+  background-color: $sunFlower;
+}
+
+.btn-footer3:hover {
+  background-color: $orange;
+  color: $clouds;
+}
+
+.btn-footer1, .btn-footer2, .btn-footer3 {
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+.btn-title {
+  font-size: 30px;
+  background-image: none;
+  background-color: $alizarin;
+  border-radius: 6px;
+  color: $clouds;
+  width: 250px;
+  margin-top: 10px;
+}
+
+.btn-title:hover {
+  background-color: $pomegranate;
+  color: $white;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.fix-navbar {
+  position: fixed;
+  top: 0 !important;
+  margin-top: 0 !important;
+  width: 100%;
+}
+
+.first-part {
+  background-color: $clouds;
+  padding-top: 20px;
+}
+
+.second-part {
+  background-color: $white;
+  padding-top: 20px;
+}
+
+.third-part, {
+  background-color: $clouds;
+  padding-top: 20px;
+}
+
+.announcer {
+  font-size: 4rem;
+  font-weight: bold;
+  color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-container {
+  margin-top: 20px;
+  padding-bottom: 0;
+  color: $clouds;
+  background-color: $turquoise;
+  font-size: 16px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  min-height: 150px;
+  position: relative;
+
+  &.footer-color {
+    background-color: $greenSea;
+  }
+}
+
+.footer-main-container {
+  padding-top: 20px;
+  height: 100%;
+}
+
+.footer-main-container-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: $white;
+}
+
+.footer-main-container-content {
+  color: $clouds;
+
+  a {
+    color: $silver;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: $white;
+  }
+}
+
+.footer-info-container {
+  background-color: $clouds;
+  height: 100%;
+  padding: 20px;
+  padding-bottom: 10px;
+  color: $silver;
+}
+
+.footer-info-container-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: $concrete;
+}
+
+.footer-info-container-list {
+  ul {
+    padding-left: 0;
+
+    li {
+      border-bottom: 1px solid $silver;
+      list-style-type: none;
+      color: $silver;
+      line-height: 2;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}

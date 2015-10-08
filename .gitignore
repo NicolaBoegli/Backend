@@ -1,0 +1,11 @@
+.grunt/**/*
+.idea/**/*
+*.iml
+
+src/main/web/bower_components/**/*
+dev/**/*
+dist/**/*
+node_modules/**/*
+private/**/*
+test/reports/**/*
+test/coverage/**/*

@@ -1,0 +1,36 @@
+{
+  "name": "job-desk",
+  "version": "0.0.1",
+  "ignore": [
+    ".idea",
+    "components",
+    "node_modules",
+    "test",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "*.iml",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "appPath": "src/main/web",
+  "testPath": "src/test/unit",
+  "dependencies": {
+    "jquery": "2.1.1",
+    "angular": "1.3.5",
+    "bootstrap": "3.3.5",
+    "angular-route": "1.3.8"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/css/bootstrap-theme.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

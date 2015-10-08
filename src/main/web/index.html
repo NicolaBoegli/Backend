@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="sampleapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Samplesite</title>
+    <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap-theme.css' />
+    <!-- endbower -->
+    <link rel="stylesheet" href="styles/backend.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<front-page-control></front-page-control>
+<!-- Navbar -->
+<navbar-control></navbar-control>
+
+<!-- Main Container -->
+<div class="ng-cloak" ng-view></div>
+<!-- Footer -->
+<footer-control></footer-control>
+
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<script src="scripts/application.js"></script>
+<script src="scripts/modules/hello.js"></script>
+<script src="scripts/modules/main.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/service.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="container min-height" id="control-container">
+    <div class="row">
+        <div class="col-md-12 basic-container">
+            <div class="page-header">
+                <span class="make-title">Hellos
+                    <a type="button" class="btn btn-custom pull-right center" href="/#/hello/create">Create</a>
+                </span>
+            </div>
+            <div class="panel panel-default" ng-repeat="hello in hellos">
+                <div class="panel-body">
+                    <div class="col-md-11 pull-left no-padding" ng-click="goToHello(hello.id)">
+                        <span class="custom-panel-title">Hello</span>
+                        id: {{hello.id}}
+                        content: {{hello.content}}
+                    </div>
+                    <a class="pull-right panel-button" ng-click="removeHello(hello.id)">
+                        delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

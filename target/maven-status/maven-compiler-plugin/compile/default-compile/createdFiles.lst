@@ -1,6 +1,0 @@
-hello\model\Hello.class
-hello\service\HelloService.class
-hello\controller\HelloController.class
-hello\service\DefaultHelloService.class
-hello\repository\HelloRepository.class
-hello\Application.class

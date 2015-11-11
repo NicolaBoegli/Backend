@@ -70,7 +70,7 @@
                 displayNone();
             } else {
                 //If its a phone hide the frontpage
-                if(viewportWidth < 768) {
+                if (viewportWidth < 768) {
                     displayNone();
                 } else {
                     displayBlock();
@@ -163,7 +163,7 @@
                 addNavbarStyle();
             } else {
                 if ($(window).scrollTop() < scrollTop) {
-                    if(titleContainer.css('display') == 'block') {
+                    if (titleContainer.css('display') === 'block') {
                         removeFixedClass();
                         removeNavbarStyle();
                     }
@@ -301,7 +301,7 @@
         function decorateFunctionCall(fn, interval) {
             $interval(function () {
                 fn();
-            }, interval, 3);
+            }, interval, 4);
         }
 
         return {

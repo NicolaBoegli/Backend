@@ -1,6 +1,7 @@
-/*sass --watch backend.scss:backend.css*/
+/// @author Nicola Boegli
 
-/* set colors */
+/// set color variables
+/// colors from Flat-UI
 $turquoise: #1abc9c;
 $greenSea: #16a085;
 $peterRiver: #3498db;
@@ -81,7 +82,7 @@ html {
 body {
   background-color: $white;
   color: $concrete;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Tahoma", Georgia, Serif;
 }
 
 #navigation {
@@ -102,12 +103,13 @@ body {
   z-index: 100;
 }
 
-.create-container {
+.create-container, .detail-container {
   background-color: $clouds;
+  padding: 15px;
+  border-radius: 6px;
 }
 
 .front-page {
-  /*background: url("../images/background.jpg") no-repeat center center;*/
   background-color: $turquoise;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -210,10 +212,6 @@ body {
   border: none;
 }
 
-/*
-  Fixed version of the navbar for front-page
-*/
-
 .fix-navbar-style {
 
   &.navbar-default {
@@ -241,7 +239,6 @@ body {
           color: $greenSea;
         }
       }
-
     }
 
     .navbar-brand {
@@ -340,6 +337,42 @@ body {
 
 .btn-custom:hover, .btn-custom:focus {
   background-color: $greenSea;
+  color: $clouds;
+}
+
+.btn-return {
+  background-color: $sunFlower;
+  color: $white;
+  width: 80px;
+  font-size: 16px;
+}
+
+.btn-return:hover, .btn-return:focus {
+  background-color: $orange;
+  color: $clouds;
+}
+
+.btn-delete {
+  background-color: $alizarin;
+  color: $white;
+  width: 80px;
+  font-size: 16px;
+}
+
+.btn-delete:hover, .btn-delete:focus {
+  background-color: $pomegranate;
+  color: $clouds;
+}
+
+.btn-edit {
+  background-color: $peterRiver;
+  color: $white;
+  width: 80px;
+  font-size: 16px;
+}
+
+.btn-edit:hover, .btn-edit:focus {
+  background-color: $belizeHole;
   color: $clouds;
 }
 
@@ -493,5 +526,72 @@ body {
     li:last-child {
       border-bottom: none;
     }
+  }
+}
+
+.test {
+  background-color: red;
+}
+
+.fix-panel {
+  height: 100%;
+  padding: 15px;
+}
+
+.panel-body {
+  padding: 0;
+}
+
+.input-design {
+  height: 40px;
+  border: 3px solid $white;
+  box-shadow: none;
+  border-radius: 6px;
+  color: $concrete;
+  width: 100%;
+  display: block;
+  padding-left: 10px;
+
+  &:focus {
+    border: 3px solid $turquoise;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+    color: $silver;
+    opacity: 0.2;
+  }
+
+  &:disabled {
+    background-color: $white;
+    cursor: not-allowed;
+  }
+}
+
+.textarea-design {
+  border: 3px solid $white;
+  box-shadow: none;
+  border-radius: 6px;
+  color: $concrete;
+  width: 100%;
+  display: block;
+  padding-left: 10px;
+  padding-top: 5px;
+
+  &:focus {
+    border: 3px solid $turquoise;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+    color: $silver;
+    opacity: 0.2;
+  }
+
+  &:disabled {
+    background-color: $white;
+    cursor: not-allowed;
   }
 }

@@ -8,12 +8,12 @@
             </div>
             <div class="panel panel-default" ng-repeat="hello in hellos">
                 <div class="panel-body">
-                    <div class="col-md-11 pull-left no-padding" ng-click="goToHello(hello.id)">
+                    <div class="col-md-11 pull-left no-padding fix-panel" ng-click="goToHello(hello.id)">
                         <span class="custom-panel-title">Hello</span>
-                        id: {{hello.id}}
-                        content: {{hello.content}}
+                        <b>id:</b> {{hello.id}}
+                        <b>content:</b> {{hello.content}}
                     </div>
-                    <a class="pull-right panel-button" ng-click="removeHello(hello.id)">
+                    <a class="pull-right panel-button fix-panel" ng-click="removeHello(hello.id)">
                         delete
                     </a>
                 </div>

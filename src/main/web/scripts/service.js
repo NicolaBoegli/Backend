@@ -50,6 +50,24 @@
             'persist': persist,
             'remove': remove,
             'getData': getData
+        };
+    }]);
+
+    module.factory('shareService', [function() {
+        var data = {};
+
+        function setData(ಠ_ಠ) {
+            data = ಠ_ಠ;
         }
+
+        function getData() {
+            return data;
+        }
+
+        return {
+            'setData': setData,
+            'getData': getData
+        };
+
     }]);
 })();

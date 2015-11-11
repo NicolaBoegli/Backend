@@ -2,11 +2,18 @@
     <div class="row">
         <div class="col-md-12 basic-container">
             <div class="page-header make-title">Hello: {{hello.id}}</div>
-            id: {{hello.id}} <br/>
-            content: {{hello.content}}
-            <br/>
-            <a type="button" class="btn btn-danger" ng-click="removeHello(hello.id)" href="/#/hello">Delete</a>
-            <a type="button" class="btn btn-warning" href="/#/hello">Back</a>
+            <div class="detail-container">
+                <div class="form-group">
+                    <label for="helloId">id:</label>
+                    <input type="text" id="helloId" class="input-design" ng-model="hello.id" disabled/>
+                    <label for="contentId">content:</label>
+                    <textarea id="contentId" class="textarea-design" rows="3" ng-model="hello.content"></textarea>
+
+                </div>
+                <a type="button" class="btn btn-edit" ng-click="persistHello(hello)">Edit</a>
+                <a type="button" class="btn btn-delete" ng-click="removeHello(hello.id)" href="/#/hello">Delete</a>
+                <a type="button" class="btn btn-return" href="/#/hello">Back</a>
+            </div>
         </div>
     </div>
 </div>

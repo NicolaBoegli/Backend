@@ -1,11 +1,9 @@
 package hello.controller;
 
 import hello.model.Hello;
-import hello.repository.HelloRepository;
 import hello.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,7 +50,7 @@ public class HelloController {
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public void delete(@PathVariable Long id) {
-        log.debug("Rest request to delete a Hello with id: "+id);
+        log.debug("REST request to delete a Hello with id: "+id);
         service.delete(id);
     }
 }

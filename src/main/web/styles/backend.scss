@@ -21,6 +21,19 @@ $asbestos: #7f8c8d;
 $black: #000000;
 $white: #ffffff;
 
+@mixin app-button($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+  width: 80px;
+  font-size: 16px;
+}
+
+@mixin app-button-hover($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+  transition: background 0.2s ease-in, color 0.2s ease-in;
+}
+
 html {
   font-size: 10px;
 }
@@ -82,7 +95,7 @@ html {
 body {
   background-color: $white;
   color: $concrete;
-  font-family: "Tahoma", Georgia, Serif;
+  font-family: "source-sans-pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #navigation {
@@ -329,51 +342,35 @@ body {
 }
 
 .btn-custom {
-  background-color: $turquoise;
-  color: $white;
-  width: 80px;
-  font-size: 16px;
+  @include app-button($turquoise, $white);
 }
 
 .btn-custom:hover, .btn-custom:focus {
-  background-color: $greenSea;
-  color: $clouds;
+  @include app-button-hover($greenSea, $clouds);
 }
 
 .btn-return {
-  background-color: $sunFlower;
-  color: $white;
-  width: 80px;
-  font-size: 16px;
+  @include app-button($sunFlower, $white);
 }
 
 .btn-return:hover, .btn-return:focus {
-  background-color: $orange;
-  color: $clouds;
+  @include app-button-hover($orange, $clouds);
 }
 
 .btn-delete {
-  background-color: $alizarin;
-  color: $white;
-  width: 80px;
-  font-size: 16px;
+  @include app-button($alizarin, $white);
 }
 
 .btn-delete:hover, .btn-delete:focus {
-  background-color: $pomegranate;
-  color: $clouds;
+  @include app-button-hover($pomegranate, $clouds);
 }
 
 .btn-edit {
-  background-color: $peterRiver;
-  color: $white;
-  width: 80px;
-  font-size: 16px;
+  @include app-button($peterRiver, $white);
 }
 
 .btn-edit:hover, .btn-edit:focus {
-  background-color: $belizeHole;
-  color: $clouds;
+  @include app-button-hover($belizeHole, $clouds);
 }
 
 .btn-footer1 {
@@ -383,6 +380,7 @@ body {
 .btn-footer1:hover {
   background-color: $pomegranate;
   color: $clouds;
+  transition: background 0.2s ease-in;
 }
 
 .btn-footer2 {
@@ -392,6 +390,7 @@ body {
 .btn-footer2:hover {
   background-color: $pumpkin;
   color: $clouds;
+  transition: background 0.2s ease-in;
 }
 
 .btn-footer3 {
@@ -401,6 +400,7 @@ body {
 .btn-footer3:hover {
   background-color: $orange;
   color: $clouds;
+  transition: background 0.2s ease-in;
 }
 
 .btn-footer1, .btn-footer2, .btn-footer3 {
@@ -422,6 +422,7 @@ body {
 .btn-title:hover {
   background-color: $pomegranate;
   color: $white;
+  transition: background 0.2s ease-in;
 }
 
 .no-padding {
@@ -435,7 +436,7 @@ body {
   width: 100%;
 }
 
-.first-part {
+.first-part, .third-part {
   background-color: $clouds;
   padding-top: 20px;
 }
@@ -443,19 +444,6 @@ body {
 .second-part {
   background-color: $white;
   padding-top: 20px;
-}
-
-.third-part, {
-  background-color: $clouds;
-  padding-top: 20px;
-}
-
-.announcer {
-  font-size: 4rem;
-  font-weight: bold;
-  color: $white;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .footer-container {
@@ -529,10 +517,6 @@ body {
   }
 }
 
-.test {
-  background-color: red;
-}
-
 .fix-panel {
   height: 100%;
   padding: 15px;
@@ -544,18 +528,21 @@ body {
 
 .input-design {
   height: 40px;
-  border: 3px solid $white;
+  border: 2px solid $white;
   box-shadow: none;
   border-radius: 6px;
   color: $concrete;
   width: 100%;
   display: block;
   padding-left: 10px;
+  transition: border 0.2s ease-in;
 
   &:focus {
-    border: 3px solid $turquoise;
+    border: 2px solid $turquoise;
     box-shadow: none;
     border-radius: 6px;
+    outline: 0;
+    transition: border 0.2s ease-in;
   }
 
   &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
@@ -564,13 +551,14 @@ body {
   }
 
   &:disabled {
-    background-color: $white;
+    background-color: rgba($silver, 0.5);
+    border-color: rgba($silver, 0.1);
     cursor: not-allowed;
   }
 }
 
 .textarea-design {
-  border: 3px solid $white;
+  border: 2px solid $white;
   box-shadow: none;
   border-radius: 6px;
   color: $concrete;
@@ -578,11 +566,14 @@ body {
   display: block;
   padding-left: 10px;
   padding-top: 5px;
+  resize: none;
+  transition: border 0.2s ease-in;
 
   &:focus {
-    border: 3px solid $turquoise;
+    border: 2px solid $turquoise;
     box-shadow: none;
     border-radius: 6px;
+    outline: 0;
   }
 
   &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {

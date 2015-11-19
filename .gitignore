@@ -10,3 +10,4 @@ private/**/*
 test/reports/**/*
 test/coverage/**/*
 target/**/*
+src/main/web/styles/.sass-cache

@@ -3,6 +3,14 @@
 
     var module = angular.module('sampleapp');
 
+    module.directive('testDirective', function() {
+         return {
+             restrict: 'E',
+             replace: true,
+             template: '<h1>Some Text</h1>'
+         };
+    });
+
     /*
      * Mark Active Navigation Point Directive
      * */

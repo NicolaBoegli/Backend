@@ -163,7 +163,7 @@ body {
   color: $concrete;
   border: none;
   box-shadow: none !important;
-  transition: background 0.1s ease-in, color 0.05s ease-in;
+  transition: background 0.25s linear 0s;
 
   .panel-button {
     color: inherit;
@@ -174,7 +174,7 @@ body {
   cursor: pointer;
   background-color: $turquoise;
   color: $clouds;
-  transition: background 0.1s ease-in, color 0.05s ease-in;
+  transition: background 0.25s linear 0s, color 0.05s linear 0s;
 
   .panel-button:hover {
     color: $white;
@@ -352,7 +352,7 @@ body {
 .btn-footer1:hover {
   background-color: $pomegranate;
   color: $clouds;
-  transition: background 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 }
 
 .btn-footer2 {
@@ -362,7 +362,7 @@ body {
 .btn-footer2:hover {
   background-color: $pumpkin;
   color: $clouds;
-  transition: background 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 }
 
 .btn-footer3 {
@@ -372,7 +372,7 @@ body {
 .btn-footer3:hover {
   background-color: $orange;
   color: $clouds;
-  transition: background 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 }
 
 .btn-footer1, .btn-footer2, .btn-footer3 {
@@ -394,7 +394,7 @@ body {
 .btn-title:hover {
   background-color: $pomegranate;
   color: $white;
-  transition: background 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 }
 
 .no-padding {
@@ -507,14 +507,14 @@ body {
   width: 100%;
   display: block;
   padding-left: 10px;
-  transition: border 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 
   &:focus {
     border: 2px solid $turquoise;
     box-shadow: none;
     border-radius: 6px;
     outline: 0;
-    transition: border 0.2s ease-in;
+    transition: all 0.25s ease 0s;
   }
 
   &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
@@ -539,13 +539,14 @@ body {
   padding-left: 10px;
   padding-top: 5px;
   resize: none;
-  transition: border 0.2s ease-in;
+  transition: all 0.25s ease 0s;
 
   &:focus {
     border: 2px solid $turquoise;
     box-shadow: none;
     border-radius: 6px;
     outline: 0;
+    transition: all 0.25s ease 0s;
   }
 
   &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {

@@ -110,7 +110,7 @@ body {
   color: #95a5a6;
   border: none;
   box-shadow: none !important;
-  transition: background 0.1s ease-in, color 0.05s ease-in; }
+  transition: background 0.25s linear 0s; }
   .panel .panel-button {
     color: inherit; }
 
@@ -118,7 +118,7 @@ body {
   cursor: pointer;
   background-color: #1abc9c;
   color: #ecf0f1;
-  transition: background 0.1s ease-in, color 0.05s ease-in; }
+  transition: background 0.25s linear 0s, color 0.05s linear 0s; }
   .panel:hover .panel-button:hover {
     color: #ffffff;
     text-decoration: none; }
@@ -209,7 +209,7 @@ body {
 .btn-custom:hover, .btn-custom:focus {
   background-color: #16a085;
   color: #ecf0f1;
-  transition: background 0.2s ease-in, color 0.2s ease-in; }
+  transition: all 0.25s linear 0s; }
 
 .btn-return {
   background-color: #f1c40f;
@@ -220,7 +220,7 @@ body {
 .btn-return:hover, .btn-return:focus {
   background-color: #f39c12;
   color: #ecf0f1;
-  transition: background 0.2s ease-in, color 0.2s ease-in; }
+  transition: all 0.25s linear 0s; }
 
 .btn-delete {
   background-color: #e74c3c;
@@ -231,7 +231,7 @@ body {
 .btn-delete:hover, .btn-delete:focus {
   background-color: #c0392b;
   color: #ecf0f1;
-  transition: background 0.2s ease-in, color 0.2s ease-in; }
+  transition: all 0.25s linear 0s; }
 
 .btn-edit {
   background-color: #3498db;
@@ -242,7 +242,7 @@ body {
 .btn-edit:hover, .btn-edit:focus {
   background-color: #2980b9;
   color: #ecf0f1;
-  transition: background 0.2s ease-in, color 0.2s ease-in; }
+  transition: all 0.25s linear 0s; }
 
 .btn-footer1 {
   background-color: #e74c3c; }
@@ -250,7 +250,7 @@ body {
 .btn-footer1:hover {
   background-color: #c0392b;
   color: #ecf0f1;
-  transition: background 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
 
 .btn-footer2 {
   background-color: #e67e22; }
@@ -258,7 +258,7 @@ body {
 .btn-footer2:hover {
   background-color: #d35400;
   color: #ecf0f1;
-  transition: background 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
 
 .btn-footer3 {
   background-color: #f1c40f; }
@@ -266,7 +266,7 @@ body {
 .btn-footer3:hover {
   background-color: #f39c12;
   color: #ecf0f1;
-  transition: background 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
 
 .btn-footer1, .btn-footer2, .btn-footer3 {
   margin-top: 10px;
@@ -285,7 +285,7 @@ body {
 .btn-title:hover {
   background-color: #c0392b;
   color: #ffffff;
-  transition: background 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
 
 .no-padding {
   padding: 0px; }
@@ -372,13 +372,13 @@ body {
   width: 100%;
   display: block;
   padding-left: 10px;
-  transition: border 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
   .input-design:focus {
     border: 2px solid #1abc9c;
     box-shadow: none;
     border-radius: 6px;
     outline: 0;
-    transition: border 0.2s ease-in; }
+    transition: all 0.25s ease 0s; }
   .input-design::-webkit-input-placeholder, .input-design::-moz-placeholder, .input-design:-ms-input-placeholder {
     color: #bdc3c7;
     opacity: 0.2; }
@@ -397,12 +397,13 @@ body {
   padding-left: 10px;
   padding-top: 5px;
   resize: none;
-  transition: border 0.2s ease-in; }
+  transition: all 0.25s ease 0s; }
   .textarea-design:focus {
     border: 2px solid #1abc9c;
     box-shadow: none;
     border-radius: 6px;
-    outline: 0; }
+    outline: 0;
+    transition: all 0.25s ease 0s; }
   .textarea-design::-webkit-input-placeholder, .textarea-design::-moz-placeholder, .textarea-design:-ms-input-placeholder {
     color: #bdc3c7;
     opacity: 0.2; }

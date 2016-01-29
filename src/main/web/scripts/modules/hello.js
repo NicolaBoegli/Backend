@@ -24,6 +24,11 @@
                 });
             });
         };
+
+        $scope.testFunction = function(id) {
+            id = id + 2;
+            return id;
+        }
     }]);
 
     module.controller('HelloDetailController', ['$scope', '$location', 'helloService', '$routeParams', function ($scope, $location, helloService, $routeParams) {

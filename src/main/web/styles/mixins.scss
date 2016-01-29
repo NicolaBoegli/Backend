@@ -8,5 +8,5 @@
 @mixin app-button-hover($background-color, $color) {
   background-color: $background-color;
   color: $color;
-  transition: background 0.2s ease-in, color 0.2s ease-in;
+  transition: all 0.25s linear 0s;
 }
